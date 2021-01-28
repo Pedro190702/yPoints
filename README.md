@@ -1,3 +1,5 @@
+### _Credits to [Don't](https://github.com/noobmobile) for the database methods_
+
 # yPoints API
 
 In this topic you'll find methods about the yPoints API.
