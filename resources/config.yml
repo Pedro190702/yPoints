@@ -1,0 +1,53 @@
+Database:
+  Tipo: SQLITE #Tipos válidos: MYSQL_FAST, MYSQL, SQLITE
+  IP: localhost:3306
+  DB: test
+  User: admin
+  Pass: ''
+  Debug: true
+   
+Formats:
+    - ''
+    - ''
+    - 'K'
+    - 'M'
+    - 'B'
+    
+Arrows:
+   Back:
+      CustomSkull: false
+      URL: ''
+      ID: 262
+      Data: 0
+      Glow: false
+      Name: '&8Back'
+      Lore:
+      - ''
+      - '&eClick to go back.'
+      - ''    
+   Next:
+      CustomSkull: false
+      URL: ''
+      ID: 262
+      Data: 0
+      Glow: false
+      Name: '&8Next'
+      Lore:
+      - ''
+      - '&eClick to go to the next page.'
+      - '' 
+    
+Top:
+   Name: '&cyPoints TOP'
+   Back: 40
+   Next: 41
+   Size: 54
+   Slots: [10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25, 28, 29, 30, 31, 32, 33, 34, 37, 38, 39, 40, 41, 42, 43]
+   Item:
+      Name: '&c{player} &7{pos}&cº'
+      Lore:
+      - ''
+      - '&c{player}'
+      - '&cPosition &7{pos}&cº'
+      - '&cPoints: &7{points}'
+      - ''

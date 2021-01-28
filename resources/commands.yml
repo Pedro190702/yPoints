@@ -1,0 +1,43 @@
+Command help:
+ - '&c/points'
+ - '&c/points &7<player>'
+ - '&c/points &7help'
+ - '&c/points &7pay <player> <amount>'
+ - '&c/points &7set <player> <amount>'
+ - '&c/points &7add <player> <amount>'
+ - '&c/points &7remove <player> <amount>'
+ - '&c/points &7reload'
+ - '&c/points &7top'
+ 
+MainCommand:
+   Command: 'points'
+   Aliases: ["cash", "gold"] 
+ 
+SubCommands:
+   Help: 'help'
+   Pay: 'pay'
+   Set: 'set'
+   Add: 'add'
+   Remove: 'remove'
+   Reload: 'reload'
+   Top: 'top'
+   
+Usage:
+   Pay: '&cUse: /points &7pay <player> <amount>'
+   Set: '&cUse: /points &7set <player> <amount>'
+   Add: '&cUse: /points &7add <player> <amount>'
+   Remove: '&cUse: /points &7remove <player> <amount>'
+ 
+Permission: '&cYou do not have permission to do this.'
+Player points: '&cYou have &7{points} &cpoints.'
+Player points target: '&cThe player &7{player} &chas &7{points} &cpoints.'
+Reload: '&cConfig reloaded'
+Not a number: '&cYour arguments is not a number.'
+Player not found: '&cThe specified player was not found.'
+Pay yourself: '&cYou can not pay yourself.'
+Pay: '&cYou have pay &7{player} &aan amount of &7{points} &cpoints.'
+Pay target: '&cYou got payed by &7{player} &aan amount of &7{points} &cpoints.'
+Add: '&cYou added an amount of &7{points} &cto the player &7{player}&c.'
+Remove: '&cYou removed an amount of &7{points} &cfrom the player &7{player}&c.'
+Remove more: '&cYou can not remove this amount, the player &7{player} &conly have &7{points}&c.'
+Set: '&cYou set an amount of &7{points} &cto the player &7{player}&c.'

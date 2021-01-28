@@ -1,0 +1,5 @@
+name: yPoints
+authors: [yChusy]
+version: 2.0.0
+main: com.ystoreplugins.ypoints.Main
+softDepend: [MVdWPlaceholderAPI, PlaceholderAPI]
