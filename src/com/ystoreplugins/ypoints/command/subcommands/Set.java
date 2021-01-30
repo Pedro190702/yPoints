@@ -3,7 +3,6 @@ package com.ystoreplugins.ypoints.command.subcommands;
 import org.bukkit.command.CommandSender;
 
 import com.ystoreplugins.ypoints.Main;
-import com.ystoreplugins.ypoints.api.yPointsAPI;
 import com.ystoreplugins.ypoints.enums.Messages;
 import com.ystoreplugins.ypoints.methods.IsNumeric;
 import com.ystoreplugins.ypoints.models.PlayerPoints;
@@ -31,8 +30,7 @@ public class Set {
 		}
 		
 		PlayerPoints pPoints = main.mainDataManager.USERS.getCached(playerName);
-		
-		yPointsAPI.ypointsapi.setPoints(pPoints, value);
+		pPoints.setPoints(value);
 		sender.sendMessage(Messages.SET.getValue().replace("{player}", playerName).replace("{points}", formatted));
 	}
 }

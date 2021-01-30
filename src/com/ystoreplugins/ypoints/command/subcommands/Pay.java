@@ -5,7 +5,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.ystoreplugins.ypoints.Main;
-import com.ystoreplugins.ypoints.api.yPointsAPI;
 import com.ystoreplugins.ypoints.enums.Messages;
 import com.ystoreplugins.ypoints.methods.IsNumeric;
 import com.ystoreplugins.ypoints.models.PlayerPoints;
@@ -50,8 +49,8 @@ public class Pay {
 		if (pPoints.getPoints() < value)
 			return;
 		
-		yPointsAPI.ypointsapi.addPoints(tPoints, value);
-		yPointsAPI.ypointsapi.removePoints(pPoints, value);
+		tPoints.setPoints(tPoints.getPoints() + value);
+		pPoints.setPoints(pPoints.getPoints() - value);
 		
 		p.sendMessage(Messages.PAY.getValue().replace("{player}", t.getName()).replace("{points}", formatted));
 		t.sendMessage(Messages.PAYTARGET.getValue().replace("{player}", p.getName()).replace("{points}", formatted));

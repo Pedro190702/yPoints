@@ -3,7 +3,6 @@ package com.ystoreplugins.ypoints.command.subcommands;
 import org.bukkit.command.CommandSender;
 
 import com.ystoreplugins.ypoints.Main;
-import com.ystoreplugins.ypoints.api.yPointsAPI;
 import com.ystoreplugins.ypoints.enums.Messages;
 import com.ystoreplugins.ypoints.methods.IsNumeric;
 import com.ystoreplugins.ypoints.models.PlayerPoints;
@@ -38,7 +37,7 @@ public class Remove {
 			return;
 		}
 		
-		yPointsAPI.ypointsapi.removePoints(pPoints, value);
+		pPoints.setPoints(pPoints.getPoints() - value);
 		sender.sendMessage(Messages.REMOVE.getValue().replace("{player}", playerName).replace("{points}", formatted));
 	}
 }

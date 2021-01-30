@@ -2,6 +2,7 @@ package com.ystoreplugins.ypoints.listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
@@ -9,12 +10,13 @@ import com.ystoreplugins.ypoints.Main;
 import com.ystoreplugins.ypoints.database.util.Utils;
 import com.ystoreplugins.ypoints.models.PlayerPoints;
 
-public class PlayerJoinQuit {
+public class PlayerJoinQuit implements Listener {
 	
 	private final Main main;
 	
     public PlayerJoinQuit(Main main) {
     	this.main = main;
+    	main.getServer().getPluginManager().registerEvents(this, main);
     }
 
     @EventHandler
